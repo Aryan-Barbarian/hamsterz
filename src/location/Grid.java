@@ -6,35 +6,40 @@ import java.util.Map;
 /**
  * Created by aryan on 6/17/2016.
  */
-public class Grid {
+// TODO: add <E>
+public class Grid<LOC extends GridLocation> {
     private List<Gridable> members;
-    private Map<GridLocation, Gridable> locToMember;
-    private Map<Gridable, GridLocation> memberToLoc;
+    private Map<LOC, Gridable> locToMember;
+    private Map<Gridable, LOC> memberToLoc;
 
-    public void addMember(Gridable newMember, GridLocation location) {
+    public LOC locationOf(Gridable member) {
+        return memberToLoc.get(member);
+    }
+
+    public void addMember(Gridable newMember, LOC location) {
         this.members.add(newMember);
         locToMember.put(location, newMember);
         memberToLoc.put(newMember, location);
     }
 
     public void removeMember(Gridable member) {
-        GridLocation location = memberToLoc.get(member);
+        LOC location = memberToLoc.get(member);
         members.remove(member);
         locToMember.remove(location);
         memberToLoc.remove(member);
     }
 
-    public void move(GridLocation from, GridLocation to) {
+    public void move(LOC from, LOC to) {
         Gridable member = locToMember.get(from);
         move(member, from, to);
     }
 
-    public void move(Gridable member, GridLocation to) {
-        GridLocation from = memberToLoc.get(member);
+    public void move(Gridable member, LOC to) {
+        LOC from = memberToLoc.get(member);
         move(member, from, to);
     }
 
-    private void move(Gridable member, GridLocation from, GridLocation to) {
+    private void move(Gridable member, LOC from, LOC to) {
         locToMember.remove(from);
         locToMember.put(to, member);
         memberToLoc.replace(member, to);
