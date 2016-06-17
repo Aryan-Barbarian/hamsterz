@@ -11,30 +11,32 @@ public class Grid {
     private Map<GridLocation, Gridable> locToMember;
     private Map<Gridable, GridLocation> memberToLoc;
 
-    // TODO: Experimental memoization
-    private Map<GridLocation, List<GridLocation>> neighborCache;
-
-    public void addMember(Gridable newMember) {
-        // TODO: Implement
-    }
-
     public void addMember(Gridable newMember, GridLocation location) {
-        // TODO: Implement
+        this.members.add(newMember);
+        locToMember.put(location, newMember);
+        memberToLoc.put(newMember, location);
     }
 
     public void removeMember(Gridable member) {
-        // TODO: Implement
+        GridLocation location = memberToLoc.get(member);
+        members.remove(member);
+        locToMember.remove(location);
+        memberToLoc.remove(member);
     }
 
-    public List<Gridable> getNeighbors(Gridable member) {
-        return null; // TODO: implement
+    public void move(GridLocation from, GridLocation to) {
+        Gridable member = locToMember.get(from);
+        move(member, from, to);
     }
 
-    public List<Gridable> cherryPick(List<GridLocation> locations) {
-        return null; // TODO: implement
+    public void move(Gridable member, GridLocation to) {
+        GridLocation from = memberToLoc.get(member);
+        move(member, from, to);
     }
 
-    private List<GridLocation> generateNeighborLocations(GridLocation location) {
-        return null; // TODO: implement
+    private void move(Gridable member, GridLocation from, GridLocation to) {
+        locToMember.remove(from);
+        locToMember.put(to, member);
+        memberToLoc.replace(member, to);
     }
 }
