@@ -8,7 +8,7 @@ import java.util.Scanner;
  */
 public class Game {
 
-    public static final int WIN_WIDTH = 100, WIN_HEIGHT = 100;
+    public static final int WIN_WIDTH = 20, WIN_HEIGHT = 20;
     Displayer displayer;
     World world;
 

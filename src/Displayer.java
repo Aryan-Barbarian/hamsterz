@@ -22,11 +22,10 @@ public class Displayer {
 
     public void updateDisplay() {
         Map<GridLocation2D, Actor> locToActor = world.getDisplayInfoByLocation();
-        StringBuilder builder = new StringBuilder(" # # # # # STATE # # # # # ");
-        for (int i = 0; i < width; i++) {
-            for (int j = 0; j < height; j++) {
-                int x = winX + i;
-                int y = winY + j;
+        StringBuilder builder = new StringBuilder(" # # # # # STATE # # # # # \n");
+        
+        for (int y = winY; y < winY + height; y++) {
+            for (int x = winX; x < winX + width; x++) {
                 char charToAdd = EMPTY_CHAR;
                 GridLocation2D key = GridLocation2D.getLocation(x, y);
                 if (locToActor.containsKey(key)) {

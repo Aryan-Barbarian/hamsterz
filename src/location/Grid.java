@@ -49,7 +49,7 @@ public class Grid<LOC extends GridLocation> {
     public void move(Gridable member, LOC from, LOC to) {
         locToMember.remove(from);
         locToMember.put(to, member);
-        memberToLoc.replace(member, to);
+        memberToLoc.replace(member, from, to);
     }
 
 }
