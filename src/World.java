@@ -1,10 +1,7 @@
 import location.Grid;
 import location.GridLocation2D;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 /**
  * Created by aryan on 6/17/2016.
@@ -104,7 +101,7 @@ public class World {
     }
 
     public Map<GridLocation2D, Actor> getDisplayInfoByLocation() {
-        Map<GridLocation2D, Actor> ans = new TreeMap<GridLocation2D, Actor>();
+        Map<GridLocation2D, Actor> ans = new HashMap<GridLocation2D, Actor>();
         for (Actor member : allMembers) {
             GridLocation2D loc = grid.locationOf(member);
             ans.put(loc, member);

@@ -8,13 +8,15 @@ import java.util.Scanner;
  */
 public class Game {
 
+    public static final int WIN_WIDTH = 100, WIN_HEIGHT = 100;
     Displayer displayer;
     World world;
 
     public void start() {
-        displayer = new Displayer();
+
         Grid<GridLocation2D> grid = new Grid<GridLocation2D>();
         world = new World(grid);
+        displayer = new Displayer(world, WIN_WIDTH, WIN_HEIGHT);
 
         ZombieGerbil zg1 = new ZombieGerbil(this, world, grid);
         ZombieGerbil zg2 = new ZombieGerbil(this, world, grid);
@@ -27,6 +29,8 @@ public class Game {
         world.addMember(zg2, loc1, true);
         world.addMember(zg3, loc1, true);
 
+        System.out.println("Let's goooo");
+        run();
     }
 
     public void run() {
@@ -35,27 +39,16 @@ public class Game {
         while (shouldRun) {
             System.out.println("How many turns to run? (-1 for exit)");
             int numTurns = reader.nextInt();
-            if (numTurns == -1) {
+            if (numTurns < 0) {
                 shouldRun = false;
             }
             while (numTurns > 0) {
                 numTurns--;
-                updateGame();
-                updateDisplay();
+                world.turn();
+                displayer.updateDisplay();
             }
         }
         System.out.println("Exiting nicely!");
     }
 
-    public void stop() {
-
-    }
-
-    public void updateGame() {
-
-    }
-
-    public void updateDisplay() {
-
-    }
 }

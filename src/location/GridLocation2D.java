@@ -6,7 +6,7 @@ import java.util.HashMap;
  * Created by aryan on 6/17/2016.
  */
 public class GridLocation2D extends GridLocation {
-    private static HashMap<int[], GridLocation2D> locationHash;
+    private static HashMap<int[], GridLocation2D> locationHash = new HashMap<int[], GridLocation2D>();
     public int x, y;
 
     public GridLocation2D(int x, int y) {

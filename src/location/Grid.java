@@ -1,5 +1,7 @@
 package location;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -12,6 +14,11 @@ public class Grid<LOC extends GridLocation> {
     private Map<LOC, Gridable> locToMember;
     private Map<Gridable, LOC> memberToLoc;
 
+    public Grid() {
+        members = new ArrayList<Gridable>();
+        locToMember = new HashMap<LOC, Gridable>();
+        memberToLoc = new HashMap<Gridable, LOC>();
+    }
     public LOC locationOf(Gridable member) {
         return memberToLoc.get(member);
     }
