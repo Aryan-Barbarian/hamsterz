@@ -1,3 +1,6 @@
+package core;
+
+import actor.Actor;
 import location.GridLocation2D;
 
 import java.util.Map;

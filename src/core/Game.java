@@ -1,3 +1,6 @@
+package core;
+
+import actor.ZombieHamster;
 import location.Grid;
 import location.GridLocation2D;
 
@@ -18,9 +21,9 @@ public class Game {
         world = new World(grid);
         displayer = new Displayer(world, WIN_WIDTH, WIN_HEIGHT);
 
-        ZombieGerbil zg1 = new ZombieGerbil(this, world, grid);
-        ZombieGerbil zg2 = new ZombieGerbil(this, world, grid);
-        ZombieGerbil zg3 = new ZombieGerbil(this, world, grid);
+        ZombieHamster zg1 = new ZombieHamster(this, world, grid);
+        ZombieHamster zg2 = new ZombieHamster(this, world, grid);
+        ZombieHamster zg3 = new ZombieHamster(this, world, grid);
         GridLocation2D loc1 = GridLocation2D.getLocation(5, 5);
         GridLocation2D loc2 = GridLocation2D.getLocation(3, 5);
         GridLocation2D loc3 = GridLocation2D.getLocation(3, 7);
