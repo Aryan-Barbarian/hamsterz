@@ -29,6 +29,10 @@ public class Actor implements Gridable {
         return Action.DO_NOTHING;
     }
 
+    public World getWorld() {
+        return world;
+    }
+
     public void handleAction(Action action) {
         GridLocation2D loc = getLocation();
         boolean moved = false;

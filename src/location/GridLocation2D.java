@@ -22,6 +22,10 @@ public class GridLocation2D extends GridLocation {
         return locationHash.get(key);
     }
 
+    public static float manhattanDistance(GridLocation2D start, GridLocation2D finish) {
+        return Math.abs(start.x - finish.x) + Math.abs(start.y - finish.y);
+    }
+
     @Override
     public int hashCode() {
         int z = 0;

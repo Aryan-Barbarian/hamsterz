@@ -5,4 +5,6 @@ package location;
  */
 public interface Gridable {
     GridLocation getLocation();
+
+    Direction getDirection();
 }

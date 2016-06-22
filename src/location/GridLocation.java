@@ -9,4 +9,5 @@ public abstract class GridLocation {
         // TODO: maybe just have the children override it and use direct values
         return this.hashCode() == obj.hashCode();
     }
+
 }

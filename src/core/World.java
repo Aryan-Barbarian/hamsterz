@@ -1,6 +1,7 @@
 package core;
 
 import actor.Actor;
+import actor.Sugar;
 import location.Grid;
 import location.GridLocation2D;
 
@@ -49,6 +50,30 @@ public class World {
         for (Actor member : allMembers) {
             GridLocation2D loc = grid.locationOf(member);
             ans.put(loc, member);
+        }
+        return ans;
+    }
+
+    public Sugar closestSugar(GridLocation2D loc) {
+
+        Sugar ans = null;
+        float bestDist = Float.MAX_VALUE;
+
+        for (Actor member : this.allMembers) {
+            Sugar currSugar;
+
+            if (member instanceof Sugar) {
+                currSugar = (Sugar) member;
+            } else {
+                continue;
+            }
+
+            GridLocation2D memLoc = member.getLocation();
+            float currDist = GridLocation2D.manhattanDistance(loc, memLoc);
+            if (currDist < bestDist) {
+                bestDist = currDist;
+                ans = currSugar;
+            }
         }
         return ans;
     }
