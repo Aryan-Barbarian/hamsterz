@@ -2,6 +2,7 @@ package actor;
 
 import core.Game;
 import core.World;
+import location.Direction;
 import location.Grid;
 import location.GridLocation2D;
 import location.Gridable;
@@ -14,11 +15,13 @@ public class Actor implements Gridable {
     private Game game;
     private World world;
     private Grid<GridLocation2D> grid;
+    private Direction direction;
 
     public Actor(Game game, World world, Grid grid) {
         this.game = game;
         this.world = world;
         this.grid = grid;
+        this.direction = Direction.NORTH;
     }
 
     public void act() {
@@ -61,10 +64,24 @@ public class Actor implements Gridable {
                 moved = true;
                 break;
             case TURN_LEFT:
-                //
+                if (this.direction.equals(Direction.NORTH))
+                    this.direction = Direction.WEST;
+                if (this.direction.equals(Direction.WEST))
+                    this.direction = Direction.SOUTH;
+                if (this.direction.equals(Direction.SOUTH))
+                    this.direction = Direction.EAST;
+                if (this.direction.equals(Direction.EAST))
+                    this.direction = Direction.NORTH;
                 break;
             case TURN_RIGHT:
-                //
+                if (this.direction.equals(Direction.NORTH))
+                    this.direction = Direction.EAST;
+                if (this.direction.equals(Direction.WEST))
+                    this.direction = Direction.NORTH;
+                if (this.direction.equals(Direction.SOUTH))
+                    this.direction = Direction.WEST;
+                if (this.direction.equals(Direction.EAST))
+                    this.direction = Direction.SOUTH;
                 break;
             case EAT:
                 //
@@ -96,5 +113,10 @@ public class Actor implements Gridable {
     @Override
     public GridLocation2D getLocation() {
         return grid.locationOf(this);
+    }
+
+    @Override
+    public Direction getDirection() {
+        return Direction.NORTH;
     }
 }
