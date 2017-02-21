@@ -12,14 +12,13 @@ import java.util.Scanner;
 public class Game {
 
     public static final int WIN_WIDTH = 20, WIN_HEIGHT = 20;
-    Displayer displayer;
+    WorldFrame displayer;
     World world;
 
     public void start() {
 
         Grid<GridLocation2D> grid = new Grid<GridLocation2D>();
         world = new World(grid);
-        displayer = new Displayer(world, WIN_WIDTH, WIN_HEIGHT);
 
         ZombieHamster zg1 = new ZombieHamster(this, world, grid);
         ZombieHamster zg2 = new ZombieHamster(this, world, grid);
@@ -32,6 +31,10 @@ public class Game {
         world.addMember(zg2, loc1, true);
         world.addMember(zg3, loc1, true);
 
+//        displayer = new Displayer(world, WIN_WIDTH, WIN_HEIGHT);
+        displayer = new WorldFrame(world);
+//        displayer.pack();
+        displayer.setVisible(true);
         System.out.println("Let's goooo");
         run();
     }
@@ -44,12 +47,12 @@ public class Game {
             int numTurns = reader.nextInt();
             if (numTurns < 0) {
                 shouldRun = false;
-            }
-            while (numTurns > 0) {
-                numTurns--;
-                world.turn();
-                displayer.updateDisplay();
-            }
+        }
+//            while (numTurns > 0) {
+//                numTurns--;
+//                world.turn();
+//                displayer.updateDisplay();
+//            }
         }
         System.out.println("Exiting nicely!");
     }

@@ -25,7 +25,7 @@ public class Actor implements Gridable {
     }
 
     public void act() {
-        Action action = getAction();
+        Action action = getAction(); // TODO: Get rid of this for performance reasons?
     }
 
     public Action getAction() {

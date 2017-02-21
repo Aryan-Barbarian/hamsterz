@@ -37,7 +37,7 @@ public class World {
     }
 
     public Map<Actor, GridLocation2D> getDisplayInfoByMember() {
-        Map<Actor, GridLocation2D> ans = new TreeMap<Actor, GridLocation2D>();
+        Map<Actor, GridLocation2D> ans = new HashMap<Actor, GridLocation2D>();
         for (Actor member : allMembers) {
             GridLocation2D loc = grid.locationOf(member);
             ans.put(member, loc);
