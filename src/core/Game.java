@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class Game {
 
     public static final int WIN_WIDTH = 20, WIN_HEIGHT = 20;
-    WorldFrame displayer;
+    VisualClient displayer;
     World world;
 
     public void start() {
@@ -32,12 +32,11 @@ public class Game {
         world.addMember(zg3, loc1, true);
 
 //        displayer = new Displayer(world, WIN_WIDTH, WIN_HEIGHT);
-        displayer = new WorldFrame(world);
-//        displayer.pack();
-        displayer.setVisible(true);
+        displayer = new VisualClient(world);
         System.out.println("Let's goooo");
         run();
     }
+
 
     public void run() {
         Scanner reader = new Scanner(System.in);
