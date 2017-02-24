@@ -75,6 +75,10 @@ public class VisualClient {
         start();
     }
 
+    private void createWindow() {
+
+    }
+
     public void start() {
         long window;
 

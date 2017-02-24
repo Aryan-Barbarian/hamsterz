@@ -1,6 +1,5 @@
 package core;
 
-import actor.ZombieHamster;
 import location.Grid;
 import location.GridLocation2D;
 
@@ -37,6 +36,9 @@ public class Game {
         run();
     }
 
+    public void turn() {
+        world.turn();
+    }
 
     public void run() {
         Scanner reader = new Scanner(System.in);

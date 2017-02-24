@@ -1,23 +1,28 @@
 package actor;
 
+import brain.Brain;
 import core.Game;
 import core.World;
 import location.Direction;
 import location.Grid;
 import location.GridLocation2D;
-import location.Gridable;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by aryan on 6/17/2016.
  */
-public class Actor implements Gridable {
+public class  Actor extends Entity {
 
     private Game game;
     private World world;
     private Grid<GridLocation2D> grid;
     private Direction direction;
+    private Brain brain;
 
     public Actor(Game game, World world, Grid grid) {
+        super(game, world, grid);
         this.game = game;
         this.world = world;
         this.grid = grid;
@@ -25,23 +30,47 @@ public class Actor implements Gridable {
     }
 
     public void act() {
-        Action action = getAction(); // TODO: Get rid of this for performance reasons?
+//        TODO: Move actor code into other classes for better modularity.
+//        Action action = getAction(); // TODO: Get rid of this for performance reasons?
+        // Create Gamestate TODO: this will be more official later
+        List<Action> legalMoves = this.getLegalMoves();
+        Action chosenMove = this.brain.getAction(legalMoves);
+        this.handleAction(chosenMove);
     }
 
-    public Action getAction() {
-        return Action.DO_NOTHING;
+    public List<Action> getLegalMoves() {
+        List<Action> ans = new ArrayList<Action>();
+        return ans;
     }
+
 
     public World getWorld() {
         return world;
     }
 
+    public Brain getBrain() {
+        return brain;
+    }
+
+    public void setBrain(Brain brain) {
+        this.brain = brain;
+    }
+
+    @Override
+    public GridLocation2D getLocation() {
+        return grid.locationOf(this);
+    }
+
+    @Override
+    public Direction getDirection() {
+        return Direction.NORTH;
+    }
+
     public void handleAction(Action action) {
-        GridLocation2D loc = getLocation();
+        GridLocation2D loc = this.getLocation();
         boolean moved = false;
         int newX = loc.x;
         int newY = loc.y;
-
         switch (action) {
             case MOVE_FORWARD:
                 newX = loc.x;
@@ -64,7 +93,7 @@ public class Actor implements Gridable {
                 moved = true;
                 break;
             case TURN_LEFT:
-                if (this.direction.equals(Direction.NORTH))
+                if (this.getDirection().equals(Direction.NORTH))
                     this.direction = Direction.WEST;
                 if (this.direction.equals(Direction.WEST))
                     this.direction = Direction.SOUTH;
@@ -103,20 +132,9 @@ public class Actor implements Gridable {
         if (moved) {
             GridLocation2D newLoc = GridLocation2D.getLocation(newX, newY);
             grid.move(this, loc, newLoc);
+
+            // TODO: Add location damage and stuff
         }
-    }
 
-    public float utility(World world) {
-        return 0;
-    }
-
-    @Override
-    public GridLocation2D getLocation() {
-        return grid.locationOf(this);
-    }
-
-    @Override
-    public Direction getDirection() {
-        return Direction.NORTH;
     }
 }

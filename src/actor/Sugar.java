@@ -20,13 +20,5 @@ public class Sugar extends Actor {
         supply -= amount;
     }
 
-    @Override
-    public Action getAction() {
-        if (supply > 0) {
-            return Action.DO_NOTHING;
-        }
-        return Action.DIE;
-    }
-
 
 }

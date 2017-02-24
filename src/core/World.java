@@ -1,7 +1,9 @@
 package core;
 
+import actor.Action;
 import actor.Actor;
 import actor.Sugar;
+import location.Direction;
 import location.Grid;
 import location.GridLocation2D;
 
@@ -32,7 +34,7 @@ public class World {
 
     public void turn() {
         for (Actor actor : this.actors) {
-            actor.act();
+            actor.act(); // TODO: make this multithreaded?
         }
     }
 
@@ -77,5 +79,7 @@ public class World {
         }
         return ans;
     }
+
+
 
 }
