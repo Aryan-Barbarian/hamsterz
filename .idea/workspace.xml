@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83bbf757-c90e-41ab-b151-71be4fddb419" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/actor/Person.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/hamsters/actor/Actor$1.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/hamsters/src/actor/ZombieHamster.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hamsters/actor/Actor$1.class" afterPath="$PROJECT_DIR$/out/production/hamsters/actor/Actor$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hamsters/actor/Actor.class" afterPath="$PROJECT_DIR$/out/production/hamsters/actor/Actor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hamsters/actor/Entity.class" afterPath="$PROJECT_DIR$/out/production/hamsters/actor/Entity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hamsters/core/Game.class" afterPath="$PROJECT_DIR$/out/production/hamsters/core/Game.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hamsters/.idea/workspace.xml" afterPath="$PROJECT_DIR$/out/production/hamsters/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hamsters/src/actor/Actor.java" afterPath="$PROJECT_DIR$/out/production/hamsters/src/actor/Actor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hamsters/src/actor/Entity.java" afterPath="$PROJECT_DIR$/out/production/hamsters/src/actor/Entity.java" />
@@ -17,12 +15,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hamsters/src/actor/Sugar.java" afterPath="$PROJECT_DIR$/out/production/hamsters/src/actor/Sugar.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hamsters/src/actor/Wall.java" afterPath="$PROJECT_DIR$/out/production/hamsters/src/actor/Wall.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hamsters/src/core/Game.java" afterPath="$PROJECT_DIR$/out/production/hamsters/src/core/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actor/Actor.java" afterPath="$PROJECT_DIR$/src/actor/Actor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actor/Entity.java" afterPath="$PROJECT_DIR$/src/actor/Entity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actor/Hamster.java" afterPath="$PROJECT_DIR$/src/actor/Hamster.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actor/Lava.java" afterPath="$PROJECT_DIR$/src/actor/Lava.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actor/Sugar.java" afterPath="$PROJECT_DIR$/src/actor/Sugar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actor/Wall.java" afterPath="$PROJECT_DIR$/src/actor/Wall.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core/Game.java" afterPath="$PROJECT_DIR$/src/core/Game.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -42,19 +35,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="planning.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/planning.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="387">
-                <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="13" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Entity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/actor/Entity.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -88,8 +68,8 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/core/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="22" column="38" lean-forward="false" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+            <state relative-caret-position="450">
+              <caret line="24" column="34" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -107,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Person.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Person.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/actor/Person.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="344">
-              <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+              <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#198#199#0" expanded="true" />
@@ -148,6 +128,16 @@
                 <element signature="e#274#275#0" expanded="true" />
                 <element signature="e#303#304#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sugar.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/actor/Sugar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="473">
+              <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -225,14 +215,14 @@
         <option value="$PROJECT_DIR$/src/actor/HungryBrain.java" />
         <option value="$PROJECT_DIR$/src/brain/Brain.java" />
         <option value="$PROJECT_DIR$/src/brain/HungryBrain.java" />
-        <option value="$PROJECT_DIR$/src/actor/Sugar.java" />
-        <option value="$PROJECT_DIR$/src/core/Game.java" />
         <option value="$PROJECT_DIR$/src/actor/Entity.java" />
         <option value="$PROJECT_DIR$/src/actor/Hamster.java" />
         <option value="$PROJECT_DIR$/src/actor/Actor.java" />
         <option value="$PROJECT_DIR$/src/actor/Person.java" />
         <option value="$PROJECT_DIR$/src/actor/Lava.java" />
         <option value="$PROJECT_DIR$/src/actor/Wall.java" />
+        <option value="$PROJECT_DIR$/src/core/Game.java" />
+        <option value="$PROJECT_DIR$/src/actor/Sugar.java" />
       </list>
     </option>
   </component>
@@ -736,7 +726,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3872" height="2092" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -747,7 +737,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3305416" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3305416" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1044,17 +1034,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/actor/Sugar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="860">
-          <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-          <folding>
-            <element signature="e#409#410#0" expanded="true" />
-            <element signature="e#438#439#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/actor/Action.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
@@ -1072,14 +1051,6 @@
             <element signature="e#690#691#0" expanded="true" />
             <element signature="e#718#719#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="22" column="38" lean-forward="false" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1145,7 +1116,7 @@
     <entry file="file://$PROJECT_DIR$/src/actor/Person.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
-          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#198#199#0" expanded="true" />
@@ -1153,6 +1124,22 @@
             <element signature="e#277#278#0" expanded="true" />
             <element signature="e#308#309#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="24" column="34" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actor/Sugar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -20,9 +20,9 @@ public class Game {
         Grid<GridLocation2D> grid = new Grid<GridLocation2D>();
         world = new World(grid);
 
-        Hamster zg1 = new Hamster(this, world, grid);
-        Hamster zg2 = new Hamster(this, world, grid);
-        Hamster zg3 = new Hamster(this, world, grid);
+        Hamster zg1 = new Hamster(world, grid);
+        Hamster zg2 = new Hamster(world, grid);
+        Hamster zg3 = new Hamster(world, grid);
         // TODO: Fix this nonesense with the different locations
         GridLocation2D loc1 = GridLocation2D.getLocation(5, 5);
         GridLocation2D loc2 = GridLocation2D.getLocation(3, 5);

@@ -11,8 +11,8 @@ public class Sugar extends Actor {
 
     private int supply;
 
-    public Sugar(Game game, World world, Grid grid) {
-        super(game, world, grid);
+    public Sugar(World world, Grid grid) {
+        super(world, grid);
         supply = 250;
     }
 
