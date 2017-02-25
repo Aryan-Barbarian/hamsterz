@@ -2,7 +2,6 @@ package actor;
 
 import core.Game;
 import core.World;
-import location.Direction;
 import location.Grid;
 
 /**
@@ -11,8 +10,12 @@ import location.Grid;
 public class Wall extends Entity {
 
 
-    public Wall(Game game, World world, Grid grid) {
-        super(game, world, grid);
+    public Wall(World world, Grid grid) {
+        super(world, grid);
     }
 
+    @Override
+    public String getName() {
+        return "wall";
+    }
 }

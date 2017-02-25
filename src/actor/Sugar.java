@@ -20,5 +20,9 @@ public class Sugar extends Actor {
         supply -= amount;
     }
 
+    @Override
+    public String getName() {
+        return "bush";
+    }
 
 }

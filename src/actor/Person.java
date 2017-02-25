@@ -5,16 +5,17 @@ import core.World;
 import location.Grid;
 
 /**
- * Created by Aryan on 2/24/2017.
+ * Created by Aryan on 2/25/2017.
  */
-public class Lava extends Wall {
-    public Lava(World world, Grid grid) {
+public class Person extends Actor {
+
+
+    public Person(World world, Grid grid) {
         super(world, grid);
     }
 
     @Override
     public String getName() {
-        return "lava";
+        return "person";
     }
-
 }

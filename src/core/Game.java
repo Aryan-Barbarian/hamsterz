@@ -1,5 +1,6 @@
 package core;
 
+import actor.Hamster;
 import location.Grid;
 import location.GridLocation2D;
 
@@ -11,7 +12,7 @@ import java.util.Scanner;
 public class Game {
 
     public static final int WIN_WIDTH = 20, WIN_HEIGHT = 20;
-    VisualClient displayer;
+    VisualClient displayer; // TODO: figure out the organization of Game, World, VisualClient and who contains whom.
     World world;
 
     public void start() {
@@ -19,14 +20,15 @@ public class Game {
         Grid<GridLocation2D> grid = new Grid<GridLocation2D>();
         world = new World(grid);
 
-        ZombieHamster zg1 = new ZombieHamster(this, world, grid);
-        ZombieHamster zg2 = new ZombieHamster(this, world, grid);
-        ZombieHamster zg3 = new ZombieHamster(this, world, grid);
+        Hamster zg1 = new Hamster(this, world, grid);
+        Hamster zg2 = new Hamster(this, world, grid);
+        Hamster zg3 = new Hamster(this, world, grid);
+        // TODO: Fix this nonesense with the different locations
         GridLocation2D loc1 = GridLocation2D.getLocation(5, 5);
         GridLocation2D loc2 = GridLocation2D.getLocation(3, 5);
         GridLocation2D loc3 = GridLocation2D.getLocation(3, 7);
 
-        world.addMember(zg1, loc1, true);
+        world.addMember(zg1, loc1, true); // TODO: shouldn't have to deal with canMove
         world.addMember(zg2, loc1, true);
         world.addMember(zg3, loc1, true);
 
@@ -48,12 +50,12 @@ public class Game {
             int numTurns = reader.nextInt();
             if (numTurns < 0) {
                 shouldRun = false;
-        }
-//            while (numTurns > 0) {
-//                numTurns--;
-//                world.turn();
+            }
+            while (numTurns > 0) {
+                numTurns--;
+                world.turn();
 //                displayer.updateDisplay();
-//            }
+            }
         }
         System.out.println("Exiting nicely!");
     }
